@@ -10,7 +10,7 @@ body {
 * {
   box-sizing: border-box;
 }
-
+/* спозиционировать,чтобы при уменьшении экрана заказать не налазило на топменю*/
 .header {
   background-color: transparent;
   display: flex;
@@ -51,7 +51,10 @@ body {
   color: #cecaca;
   padding: 15px 30px;
 }
-.topmenu li a:hover,.cart-shopping:hover {
+
+.topmenu li a:hover,
+.cart-shopping:hover,
+.delivery:hover {
   color: #d5b45b;
 }
 .submenu-link:after {
@@ -86,15 +89,28 @@ body {
   opacity: 1;
   transform: scaleY(1);
 }
-.cart-shopping{
+.delivery-reservation {
+  border-left: 1px solid #e4dcdc;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #e4dcdc;
+  font-family: sans-serif;
+  gap: 15px;
+}
+.cart-shopping {
   font-family: "FontAwesome";
-  color: white;
+  color: #e4dcdc;
   margin-right: 20px;
-
+}
+.delivery {
+  text-transform: uppercase;
+  cursor: default;
 }
 .reservation {
   text-transform: uppercase;
-  font-size: 14px;
+
   font-weight: bold;
   color: #e4dcdc;
   padding: 15px 30px;
@@ -157,7 +173,7 @@ body {
 .content-block-contairner {
   display: grid;
   gap: 20px;
-  grid-template-rows:1fr;
+  grid-template-rows: 1fr;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   position: absolute;
@@ -167,7 +183,6 @@ body {
 }
 /* нужно правильно спозиционировать*/
 .content-block {
-
   background: #ffffff;
   box-shadow: 10px 10px 40px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -221,16 +236,14 @@ body {
 }
 .about-us-images-container img {
   position: absolute;
-  transition-property: z-index,height, width,;
-  transition-duration:1s;
+  transition-property: z-index, height, width;
+  transition-duration: 1s;
   transition-timing-function: ease-in, ease-in, linear;
   box-shadow: 20px 0px 30px 3px rgba(0, 0, 0, 0.5);
-
 }
-.about-us-images-container img:not(.desing-box):hover{
+.about-us-images-container img:not(.desing-box):hover {
   z-index: 10;
-  transform: scaleX(1.1) scaleY(1.1);;
-
+  transform: scaleX(1.1) scaleY(1.1);
 }
 .dishes-image {
   left: 30px;
@@ -259,4 +272,14 @@ body {
   height: 160px;
   left: 200px;
   bottom: 300px;
+}
+.our-cooks {
+  margin-top: 30px;
+  height: 100vh;
+  text-align: center;
+}
+.cooks-photo-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
 }
