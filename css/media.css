@@ -100,7 +100,7 @@
   cursor: pointer;
 }
 }
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 390px) {
   .header{
     padding:5px 10px;
 
@@ -202,4 +202,7 @@
 .carousel-image {
   width: 280px;
 }
+}
+.inner-image-container{
+  display: none;
 }
