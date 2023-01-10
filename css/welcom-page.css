@@ -1,0 +1,139 @@
+body {
+  margin: 0px;
+  font-family: "Tinos";
+}
+.display-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  box-sizing: border-box;
+
+}
+.page-container{
+  padding: 10px 40px;
+  font-family: "Tinos", Times, serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #656363;
+}
+  
+.welcome-page {
+ 
+  background: url(../images/home-page-image.png);
+  background-size: cover;
+  height: 100vh;
+  color: var(--header-primary-color);
+  font-size: 16px;
+  padding: 0px;
+  
+}
+.header {
+  justify-content: space-between;
+  font-family: "Tinos", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.logo{
+  width: 100px;
+height: 65px;
+}
+.topmenu {
+  list-style: none;
+}
+.topmenu > li > a {
+  padding: 15px 30px;
+}
+:root {
+  --header-primary-color: #cecaca;
+  --link-color-hover: #d5b45b;
+  --button-background-color: #ff7400;
+  --welom-page-title-color: #d67e35;
+  --about-us-description-text-color: #2a2a2a;
+  --title-second-color:#D67E34;
+  
+}
+.link-decoration {
+  text-decoration: none;
+  outline: none;
+  display: block;
+  transition: 0.3s ease-in-out;
+  color: inherit;
+}
+.reservation-container {
+  gap: 15px;
+  border-left: 1px solid var(--header-primary-color);
+  padding: 0px 10px;
+}
+.reservation {
+  font-weight: 400;
+  text-transform: none;
+  cursor: default;
+}
+.cart-shopping {
+  font-family: "FontAwesome";
+}
+.sidebar-icon{
+  color: var( --button-background-color);
+  display: none;
+}
+.display-none
+{
+  display: none;
+}
+.link-decoration:hover,
+.reservation:hover {
+  color: var(--link-color-hover);
+}
+.button-submit {
+  font-family:'Tinos',sans-serif;
+  background-color: var(--button-background-color);
+  color: var(--header-primary-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+}
+.button-submit:hover {
+  color: black;
+}
+.welcome-page-content {
+  color: var(--welom-page-title-color);
+  font-family: "Tinos";
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  align-self: center;
+  margin-top: 40px;
+  padding: 30px;
+}
+.welcom-page-title {
+  font-size: 60px;
+  line-height: 100px;
+}
+.welcom-page-subtitle {
+  font-size: 35px;
+  line-height: 57px;
+}
+.restaurant-name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.line {
+  display: inline-block;
+  background-color: white;
+  height: 2px;
+  width: 20px;
+}
+.margin-top-ten {
+  margin-top: 20px;
+}
+.flex-grow {
+  flex-grow: 0.5;
+}
