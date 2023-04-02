@@ -1,46 +1,145 @@
-let albums = [
-    {'images/unsplash_YrtFlrLo2DQ.png'},
-    {'images/unsplash_DBGwy7s3QY0.png'},
-    {'images/unsplash_h6gTtqBZUxc.png'},
-    {'images/unsplash_ta7rN3NcWyM.png'},
+const ALL_ITEMS = [
+  {
+    id: 1,
+    cover: "images/Alan_Walker_Faded.jpg",
+    singer: "Alan Walker",
+    songs: [
+      {
+        id: "id1",
+        cover: "images/Alan_Walker_Alone.jpg",
+        singer: "Alan Walker",
+        song: "Alone",
+        duration: "2:44",
+        path: "musics/alan-walker-alone.mp3",
+      },
+      {
+        id: "id2",
+        cover: "images/Alan_Walker_Faded.jpg",
+        singer: "Alan Walker",
+        song: "Faded",
+        duration: "3:33",
+        path: "musics/alan-walker-faded.mp3",
+      },
+      {
+        id: "id3",
+        cover: "images/Alan_Walker__Sorry.jpg",
+        singer: "Alan Walker",
+        song: "Sorry",
+        duration: "3:14",
+        path: "musics/alan-walker-the-spectre.mp3",
+      },
+      
+    ],
+  },
+  {
+    id: 2,
+    cover: "images/the_Weekend.jpg",
+    singer: "The Weeknd",
+    songs: [
+      {
+        id: "id4",
+        cover: "images/The_Weeknd_-_Blinding_Lights.png",
+        singer: "The Weeknd",
+        song: "Blinding Lights",
+        duration: "3:21",
+        path: "musics/The Weeknd - Blinding Lights.mp3",
+      },
+      {
+        id: "id5",
+        cover: "images/Call Out My Name.jpg",
+        singer: "The Weeknd",
+        song: "Call Out My Name",
+        duration: "3:48",
+        path: "musics/The Weeknd - Call Out My Name.mp3",
+      },
+      {
+        id: "id6",
+        cover: "images/In Your Eyes.jpg",
+        singer: "The Weeknd",
+        song: "In Your Eyes",
+        duration: "3:57",
+        path: "musics/The Weeknd - In Your Eyes.mp3",
+      },
+      {
+        id: "id7",
+        cover: "images/The_Weeknd_-_The_Hills.jpg",
+        singer: "The Weeknd",
+        song: "The Hills",
+        duration: "3:57",
+        path: "musics/The Weeknd - The Hills.mp3",
+      },
+    ],
+  },
 
-]
-
-let songs = [
-    {
-        cover: 'images/Katy Perry-Roar.png',
-        artist: 'Katy Perry',
-        song: 'Roar',
-        duration: '3:20',
-        path: 'musics/Roar.mp3',
-        
-        
-    },
-    {
-        cover: 'images/Taylor Swift-Snake.png',
-        artist: 'Taylor Swift',
-        song: 'Shake it Off ',
-        duration: '3:45',
-        path: 'musics/Shake it off.mp3',
-        
-        
-    },
-    {
-        cover: 'images/Marshmello&Anne-Marrie-Friends.png',
-        artist: 'Marshmello & Anne-Marie',
-        song: 'FRIENDS',
-        duration: '3:05',
-        path: 'musics/FRIENDS.mp3',
-        
-        
-    },
-    {
-        cover: 'images/Justin Bieber- Baby.png',
-        artist: 'Justin Bieber - Baby',
-        song: 'Baby',
-        duration: '3:45',
-        path: 'musics/Baby.mp3',
-        
-        
-    },
-]
+  {
+    id: 3,
+    cover: "images/talor Swift.jpg",
+    singer: "Talor Swift",
+    songs: [
+      {
+        id: "id8",
+        cover: "images/queue-item.jpg",
+        singer: "Taylor Swift",
+        song: "Lavender Haze",
+        duration: "3:22",
+        path: "musics/taylor-swift-lavender-haze-dolby-atmos-stems_456242747.mp3",
+      },
+      {
+        id: "id9",
+        cover: "images/talor Swift img.jpg",
+        singer: "Taylor Swift",
+        song: "Raputation",
+        duration: "3:50",
+        path: "musics/taylor-swift-reputation-2017-taylor-swift-dress_456239090.mp3",
+      },
+      {
+        id: "id10",
+        cover: "images/talor Swift.jpg",
+        singer: "Taylor Swift",
+        song: "Snake",
+        duration: "3:50",
+        path: "musics/taylor-swift-reputation-2017-taylor-swift-dress_456239090.mp3",
+      },
+      {
+        id: "id11",
+        cover: "images/talor Swift.jpg",
+        singer: "Taylor Swift",
+        song: "Too",
+        duration: "3:20",
+        path: "musics/taylor-swift-reputation-2017-taylor-swift-dress_456239090.mp3",
+      },
+    ],
+  },
+  {
+    id: 4,
+    cover: "images/talor Swift img.jpg",
+    singer: "Alan Walker",
+    songs: [
+      {
+        id: "id12",
+        cover: "images/Alan_Walker_Alone.jpg",
+        singer: "Alan Walker",
+        song: "Alone",
+        duration: "2:44",
+        path: "musics/alan-walker-alone.mp3",
+      },
+      {
+        id: "id13",
+        cover: "images/Alan_Walker_Faded.jpg",
+        singer: "Alan Walker",
+        song: "Faded",
+        duration: "3:33",
+        path: "musics/alan-walker-faded.mp3",
+      },
+      {
+        id: "id14",
+        cover: "images/Alan_Walker__Sorry.jpg",
+        singer: "Alan Walker",
+        song: "Sorry",
+        duration: "3:14",
+        path: "musics/alan-walker-the-spectre.mp3",
+      },
+      
+    ],
+  },
+];
