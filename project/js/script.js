@@ -11,9 +11,11 @@ async function showMovies() {
     movies.forEach((movie)=>{
       const movieEl = document.createElement("div");
       movieEl.classList.add("movie");
+      const coverUrl = covers.find(cover=>cover.id ===movie.id).src;
+
       movieEl.innerHTML = `<div class="movie-cover-inner">
       <img
-        src="https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/637fa8eb-1ac5-40ee-9c37-0ba1c794d170/300x450"
+        src="${coverUrl}"
         alt="cover"class="movie-cover"/>
       <div class="movie-cover--darkened"></div>
     </div>
