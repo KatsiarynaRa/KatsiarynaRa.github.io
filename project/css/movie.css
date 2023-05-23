@@ -1,0 +1,96 @@
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .movies.column {
+    display: block;
+  }
+  
+  .movie{
+    width: 300px;
+    margin: 10px;
+    position: relative;
+    /* display: flex;
+    gap:5px;
+   */
+  
+  }
+  .movie.display-column{    
+    margin: 10px;
+    position: relative;
+    display: flex;
+  }
+  
+  .movie-cover-inner {
+    position: relative;
+    
+  }
+  
+  .movie-cover {
+    max-width: 100%;
+    min-width: 235px;
+    height: 100%;
+  }
+  
+  .movie-cover--darkened {
+    background-color: #000000;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .movie-cover--darkened:hover {
+    background-color: grey;
+    cursor: pointer;
+  }
+  
+  .movie-info {
+    padding: 10px 0px;
+   
+  }
+  
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .episode,.release-date {
+    font-size: 14px;
+    color: #ffd80e;
+  }
+  
+  .movie-average {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 0;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a191f;
+    color: #ffffff;
+    font-size: 14px;
+  }
+  
+  .movie-average--green {
+    border: 1px solid green;
+  }
+  
+  .movie-average--orange {
+    border: 1px solid orange;
+  }
+  
+  .movie-average--red {
+    border: 1px solid red;
+  }
+  

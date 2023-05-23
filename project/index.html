@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/movie.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Movie App</title>
+  </head>
+  <body>
+    <header class="header header-content">
+      <a href="index.html" class="header__logo">Кинопоиск</a>
+      <div class="header-content search">
+        <form>
+          <input
+            type="text"
+            class="header-search decoration"
+            placeholder="Фильм, Дата выхода"
+          />
+         
+        </form>
+        <button  class="decoration">
+          <span class="material-symbols-outlined sorting-btn"
+            >tune</span
+          >
+        </button>
+        <button id="view-changer" class="decoration">
+          <span class="material-symbols-outlined sorting-btn"
+            >table_rows_narrow</span
+          >
+        </button>
+      </div>
+      
+      <!-- <div class="sorting-bar">
+        <div>
+          <span class="sorting-bar-title">Сортировать</span>
+          <select onchange="" class="decoration">
+            <option value="all">По номеру эпизода</option>
+            <option value="last_episod">С последнего</option>
+            <option value="first_episod">С первого</option>
+          </select>
+          <select onchange="" class="decoration">
+            <option value="all">По дате выхода</option>
+            <option value="release_previous">Сначало старые</option>
+            <option value="release_next">Сначала новые</option>
+          </select>
+        </div>
+        
+      </div> -->
+    </header>
+    <div class="container">
+      <div class="movies"></div>
+      <div class="modal"></div>
+    </div>
+    <script src="./js/script.js"></script>
+    <script src="./js/view.js"></script>
+  </body>
+</html>
