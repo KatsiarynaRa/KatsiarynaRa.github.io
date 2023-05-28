@@ -4,66 +4,109 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/movie.css">
+    <link rel="stylesheet" href="css/movie.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,700;1,700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
+
     <title>Movie App</title>
   </head>
   <body>
-    <header class="header header-content">
-      <a href="index.html" class="header__logo">StarWars</a>
-      <div class="header-content search">
-        <form>
-          <input
-            type="text"
-            class="header-search decoration"
-            placeholder="Фильм, Дата выхода"
-          />
-         
+    <header class="header">
+      <div class="wrapper">
+        <a href="./index.html" class="header-logo"
+          ><img
+            class="logo"
+            src="./images/pngimg.com - star_wars_logo_PNG7.png"
+            alt="StarWars"
+        /></a>
+        <form onsubmit="formEvent(event)" class="aligne-self">
+          <div class="search show">
+            <input
+              class="search__input"
+              type="search"
+              name="search"
+              oninput="getPhraseSearch(event)"
+              placeholder="Искать по названию, Номеру эпизода, Году"
+            />
+            <button
+              class="material-symbols-outlined search-button"
+              type="submit"
+              onclick="showSaerchField()"
+            >
+              search
+            </button>
+          </div>
+          <button class="language-changer" onclick="changeLanguage()">
+            En
+          </button>
+          <button
+            class="material-symbols-outlined search-button theme-btn sorting-btn "
+            type="submit"
+            onclick="showSaerchField()"
+          >
+            nightlight
+
+          </button>
         </form>
-        <button  class="decoration">
-          <span class="material-symbols-outlined sorting-btn"
-            >tune</span
-          >
-        </button>
-        <button id="view-changer" class="decoration">
-          <span class="material-symbols-outlined sorting-btn"
-            >table_rows_narrow</span
-          >
-        </button>
       </div>
-      
-      <!-- <div class="sorting-bar">
-        <div>
-          <span class="sorting-bar-title">Сортировать</span>
-          <select onchange="" class="decoration">
-            <option value="all">По номеру эпизода</option>
-            <option value="last_episod">С последнего</option>
-            <option value="first_episod">С первого</option>
-          </select>
-          <select onchange="" class="decoration">
-            <option value="all">По дате выхода</option>
-            <option value="release_previous">Сначало старые</option>
-            <option value="release_next">Сначала новые</option>
-          </select>
+      <div class="wrapper">
+        <div class="form-group">
+          <div class="selector-title">Сортировать по:</div>
+          <div class="select-wrapper">
+            <select name="select-category" id="" class="select">
+              <option value="1">номеру эпизода</option>
+              <option value="2">дате релиза</option>
+            </select>
+          </div>
+          <button
+            class="material-symbols-outlined sorting-btn"
+            data-direction="down"
+            onclick="changeDirection(event, 'down')"
+          >
+            south
+          </button>
+          <button
+            class="material-symbols-outlined sorting-btn"
+            data-direction="up"
+            onclick="changeDirection(event, 'up')"
+          >
+            north
+          </button>
         </div>
-        
-      </div> -->
+        <div class="wiev-controls">
+          <button id="view-changer" class="sorting-btn">
+            <span
+              class="material-symbols-outlined sorting-btn disable"
+              data-view="tiles"
+              onclick="changeView(event, 'tiles')"
+            >
+              calendar_view_month</span
+            >
+          </button>
+          <button id="" class="sorting-btn">
+            <span
+              class="material-symbols-outlined"
+              data-view="list"
+              onclick="changeView(event, 'list')"
+            >
+              view_list</span
+            >
+          </button>
+        </div>
+      </div>
     </header>
     <div class="container">
       <div class="movies"></div>
-      <div class="modal"></div>
     </div>
     <script src="./js/covers.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/view.js"></script>
   </body>
 </html>

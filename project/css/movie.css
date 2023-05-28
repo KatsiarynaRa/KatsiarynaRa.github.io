@@ -1,36 +1,31 @@
 .movies {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 26%);
+  justify-content: center;
+  column-gap: 3%;
+  row-gap: 15px;
+}
+.view-list{
+    grid-template-columns: repeat(auto-fit, 30%);
+}
+
+.movie{
+  width: 100%;
+  aspect-ratio: 1/1.5;
+  border-radius: 10px;
   }
-  .movies.column {
-    display: block;
-  }
+
   
-  .movie{
-    width: 300px;
-    margin: 10px;
-    position: relative;
-    /* display: flex;
-    gap:5px;
-   */
-  
-  }
-  .movie.display-column{    
-    margin: 10px;
-    position: relative;
-    display: flex;
-  }
-  
-  .movie-cover-inner {
+.movie-cover-inner {
     position: relative;
     
   }
   
   .movie-cover {
-    max-width: 100%;
-    min-width: 235px;
-    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1.5;
+    border-radius: 10px;
+    background-size: contain;
   }
   
   .movie-cover--darkened {
@@ -63,7 +58,7 @@
   
   .episode,.release-date {
     font-size: 14px;
-    color: #ffd80e;
+    color:inherit;
   }
   
   .movie-average {
