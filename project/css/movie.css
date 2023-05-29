@@ -1,18 +1,26 @@
-.movies  {
+.movies {
   display: grid;
   grid-template-columns: repeat(auto-fit, 26%);
   justify-content: center;
   column-gap: 3%;
   row-gap: 15px;
 }
+
 .view-list {
-  grid-template-columns: repeat(auto-fit, 30%);
+  display: flex;
+  flex-direction: column;
 }
 
-.movie {
-  width: 100%;
-  aspect-ratio: 1/1.5;
-  border-radius: 10px;
+.movie.list {
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+  align-items: center;
+}
+.movie.list img {
+  width: 100px;
+  height: 130px;
 }
 
 .movie-cover-inner {
@@ -37,22 +45,20 @@
   z-index: 1;
   border-radius: 10px;
 }
-
 .movie-cover--darkened:hover {
   background-color: grey;
   cursor: pointer;
 }
 
 .movie-info {
-  font-size: 'Neue';
+  font-size: "Neue";
   padding: 10px 0px;
-  color: var(--text-color: black);
+  color: var(--text-color);
 }
 
 .title {
   font-size: 16px;
   font-weight: bold;
-  c
 }
 
 .episode,
@@ -61,7 +67,7 @@
   color: inherit;
 }
 
-.movie-average {
+/* .movie-average {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -87,4 +93,4 @@
 
 .movie-average--red {
   border: 1px solid red;
-}
+} */

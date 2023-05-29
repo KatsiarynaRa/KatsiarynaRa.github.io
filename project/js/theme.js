@@ -23,3 +23,4 @@ document.querySelector('.themetoggle').addEventListener('click', (event) => {
   }
   
   addDarkClassToHTML();
+

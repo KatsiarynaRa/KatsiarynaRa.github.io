@@ -23,13 +23,13 @@ async function showMovies() {
       <div class="title">
         ${movie.title}
       </div>
-      <div class="episode"> <span>Эпизод:</span>${movie.episode_id
+      <div class="episode"> <span>Episod:</span>${movie.episode_id
       }
       </div>
       <div class="release-date">${movie.release_date}
      
       </div>
-      <div class="movie-average movie-average--green">9</div>
+     
     </div>`
     moviesEl.appendChild(movieEl);
     })
