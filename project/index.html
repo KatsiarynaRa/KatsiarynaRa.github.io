@@ -47,14 +47,15 @@
           <button class="language-changer" onclick="changeLanguage()">
             En
           </button>
-          <button
-            class="material-symbols-outlined search-button theme-btn sorting-btn "
-            type="submit"
-            onclick="showSaerchField()"
+          
+          <a href="#"
+            class="themetoggle"               
           >
-            nightlight
+          <span class="material-symbols-outlined">
+            wb_sunny
+            </span>
 
-          </button>
+          </a>
         </form>
       </div>
       <div class="wrapper">
@@ -85,7 +86,7 @@
           <button id="view-changer" class="sorting-btn">
             <span
               class="material-symbols-outlined sorting-btn disable"
-              data-view="tiles"
+              data-view="titles"
               onclick="changeView(event, 'tiles')"
             >
               calendar_view_month</span
@@ -107,6 +108,7 @@
       <div class="movies"></div>
     </div>
     <script src="./js/covers.js"></script>
+    <script src="./js/theme.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

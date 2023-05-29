@@ -1,91 +1,90 @@
-.movies {
+.movies  {
   display: grid;
   grid-template-columns: repeat(auto-fit, 26%);
   justify-content: center;
   column-gap: 3%;
   row-gap: 15px;
 }
-.view-list{
-    grid-template-columns: repeat(auto-fit, 30%);
+.view-list {
+  grid-template-columns: repeat(auto-fit, 30%);
 }
 
-.movie{
+.movie {
   width: 100%;
   aspect-ratio: 1/1.5;
   border-radius: 10px;
-  }
+}
 
-  
 .movie-cover-inner {
-    position: relative;
-    
-  }
-  
-  .movie-cover {
-    width: 100%;
-    aspect-ratio: 1/1.5;
-    border-radius: 10px;
-    background-size: contain;
-  }
-  
-  .movie-cover--darkened {
-    background-color: #000000;
-    opacity: 0.1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    max-width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  
-  .movie-cover--darkened:hover {
-    background-color: grey;
-    cursor: pointer;
-  }
-  
-  .movie-info {
-    padding: 10px 0px;
-   
-  }
-  
-  .title {
-    font-size: 16px;
-    font-weight: bold;
-    color: #ffffff;
-  }
-  
-  .episode,.release-date {
-    font-size: 14px;
-    color:inherit;
-  }
-  
-  .movie-average {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 0;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1a191f;
-    color: #ffffff;
-    font-size: 14px;
-  }
-  
-  .movie-average--green {
-    border: 1px solid green;
-  }
-  
-  .movie-average--orange {
-    border: 1px solid orange;
-  }
-  
-  .movie-average--red {
-    border: 1px solid red;
-  }
-  
+  position: relative;
+}
+
+.movie-cover {
+  width: 100%;
+  aspect-ratio: 1/1.5;
+  border-radius: 10px;
+}
+
+.movie-cover--darkened {
+  background-color: #000000;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.movie-cover--darkened:hover {
+  background-color: grey;
+  cursor: pointer;
+}
+
+.movie-info {
+  font-size: 'Neue';
+  padding: 10px 0px;
+  color: var(--text-color: black);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  c
+}
+
+.episode,
+.release-date {
+  font-size: 14px;
+  color: inherit;
+}
+
+.movie-average {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 0;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a191f;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.movie-average--green {
+  border: 1px solid green;
+}
+
+.movie-average--orange {
+  border: 1px solid orange;
+}
+
+.movie-average--red {
+  border: 1px solid red;
+}

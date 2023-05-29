@@ -1,11 +1,11 @@
-:root {
+html {
   --background-color: white;
   --text-color: black;
   --background-color-hover: #eaeaea;
   --padding-page: 20px;
   --border-color: grey;
 }
-.theme-dark {
+html.dark {
   --background-color: black;
   --text-color: white;
   --background-color-hover: #1f1d1d;
@@ -16,7 +16,9 @@
   padding: 0px;
   box-sizing: border-box;
 }
-
+.themetoggle{
+  color:inherit;
+}
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--background-color);
@@ -54,6 +56,7 @@ header.header {
   appearance: none;
   outline: none;
   cursor: pointer;
+  background: transparent;
 }
 input::-webkit-input-placeholder {
   font-size: 15px;

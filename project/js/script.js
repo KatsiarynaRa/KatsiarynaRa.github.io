@@ -7,9 +7,9 @@ showMovies();
 
 async function showMovies() {
   const movies = await getMovies();
-    const moviesEl = document.querySelector(".movies");
+    const moviesEl = document.querySelector(".movies"); 
     movies.forEach((movie)=>{
-      const movieEl = document.createElement("div");
+      const movieEl = document.createElement("a");
       movieEl.classList.add("movie");
       const coverUrl = covers.find(cover=>cover.id ===movie.id).src;
 
@@ -23,7 +23,7 @@ async function showMovies() {
       <div class="title">
         ${movie.title}
       </div>
-      <div class="episode"> <span>Эпизод: </span>${movie.episode_id
+      <div class="episode"> <span>Эпизод:</span>${movie.episode_id
       }
       </div>
       <div class="release-date">${movie.release_date}
