@@ -28,33 +28,13 @@
             alt="StarWars"
         /></a>
         <form onsubmit="formEvent(event)" class="aligne-self">
-          <div class="search show">
-            <input
-              class="search__input"
-              type="search"
-              name="search"
-              oninput="getPhraseSearch(event)"
-              placeholder="Искать по названию, Номеру эпизода, Году"
-            />
-            <button
-              class="material-symbols-outlined search-button"
-              type="submit"
-              onclick="showSaerchField()"
-            >
-              search
-            </button>
-          </div>
+     
           <button class="language-changer" onclick="changeLanguage()">
             En
           </button>
-          
-          <a href="#"
-            class="themetoggle"               
-          >
-          <span class="material-symbols-outlined">
-            wb_sunny
-            </span>
 
+          <a href="#" class="themetoggle">
+            <span class="material-symbols-outlined"> wb_sunny </span>
           </a>
         </form>
       </div>
@@ -82,24 +62,33 @@
             north
           </button>
         </div>
-        <div class="wiev-controls">
-          <button id="view-changer" class="sorting-btn">
-            <span
-              class="material-symbols-outlined sorting-btn disable"
-              data-view="titles"
-              onclick="changeView(event, 'tiles')"
-            >
-              calendar_view_month</span
-            >
+        <div class="search show ">
+          <input
+            class="search__input"
+            type="search"
+            name="search"
+            oninput="getPhraseSearch(event)"
+            placeholder="Искать по названию, Номеру эпизода, Году"
+          />
+          <button
+            class="material-symbols-outlined search-button"
+            type="submit"
+            onclick="showSaerchField()"
+          >
+            search
           </button>
-          <button id="" class="sorting-btn">
-            <span
-              class="material-symbols-outlined"
-              data-view="list"
-              onclick="changeView(event, 'list')"
-            >
-              view_list</span
-            >
+        </div>
+        <div class="wiev-controls">
+          <button
+            class="material-symbols-outlined sorting-btn view-changer disable"
+            onclick="changeView()"
+          >
+            calendar_view_month
+          </button>
+          <button class="material-symbols-outlined sorting-btn view-changer"
+          onclick="changeView()"
+          >
+            view_list
           </button>
         </div>
       </div>
@@ -109,6 +98,7 @@
     </div>
     <script src="./js/covers.js"></script>
     <script src="./js/theme.js"></script>
+    <script src="./js/view.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
