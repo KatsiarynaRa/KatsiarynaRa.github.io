@@ -13,7 +13,7 @@ async function showMovies() {
       movieEl.classList.add("movie");
       const coverUrl = covers.find(cover=>cover.id ===movie.id).src;
 
-      movieEl.innerHTML = `<a href ="../film-discription.html" class="movie-cover-inner">
+      movieEl.innerHTML = `<a href ="./film-discription.html" class="movie-cover-inner">
       <img
         src="${coverUrl}"
         alt="cover"class="movie-cover"/>
