@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/film-discription.css>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,700;1,700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Movie</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <a href="./index.html" class="header-logo"
+          ><img
+            class="logo"
+            src="./images/pngimg.com - star_wars_logo_PNG7.png"
+            alt="StarWars"
+        /></a>
+        <form onsubmit="formEvent(event)" class="aligne-self">
+          <button class="language-changer" onclick="changeLanguage()">
+            En
+          </button>
+          <a href="#" class="themetoggle">
+            <span class="material-symbols-outlined"> wb_sunny </span>
+          </a>
+        </form>
+      </div>
+    </header>
+    <main>
+      <div class="movie-wrapper">
+        <div class="movie">
+          <img src="./js/covers.js" alt="" class="cover" />
+          <div class="content">
+            <h1 class="movie-title">
+              <span>Star Wars:</span><span> Episode 5</span>
+              <span>The Empire Strikes</span>
+              Back
+            </h1>
+            <h4 class="movie-discription-title">Discription</h4>
+            <div class="discription">
+              It is a dark time for the Rebellion. Although the Death Star has
+              been destroyed, Imperial troops have driven the Rebel forces from
+              their hidden base and pursued them across the galaxy. Evading the
+              dreaded Imperial Starfleet, a group of freedom fighters led by
+              Luke Skywalker has established a new secret base on the remote ice
+              world of Hoth. The evil lord Darth Vader, obsessed with finding
+              young Skywalker, has dispatched thousands of remote probes into
+              the far reaches
+            </div>
+            <div class="file-data">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <dic class="charecters"></dic>
+    </main>
+    <script src="./js/covers.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/view.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
