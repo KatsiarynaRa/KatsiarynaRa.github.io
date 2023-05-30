@@ -10,15 +10,15 @@ async function showMovies() {
     const moviesEl = document.querySelector(".movies"); 
     movies.forEach((movie)=>{
       const movieEl = document.createElement("div");
-      movieEl.classList.add("link");
+      movieEl.classList.add("movie");
       const coverUrl = covers.find(cover=>cover.id ===movie.id).src;
 
-      movieEl.innerHTML = `<a href="./film-discription.html"><div class="movies"></div><div class="movie-cover-inner">
+      movieEl.innerHTML = `<a href ="../film-discription.html" class="movie-cover-inner">
       <img
         src="${coverUrl}"
         alt="cover"class="movie-cover"/>
       <div class="movie-cover--darkened"></div>
-    </div>
+    </a>
     <div class="movie-info">
       <div class="title">
         ${movie.title}
@@ -30,7 +30,7 @@ async function showMovies() {
      
       </div>
      
-    </div></div></a>`
+    </div>`
     moviesEl.appendChild(movieEl);
     })
     
