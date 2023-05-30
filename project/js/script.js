@@ -9,11 +9,11 @@ async function showMovies() {
   const movies = await getMovies();
     const moviesEl = document.querySelector(".movies"); 
     movies.forEach((movie)=>{
-      const movieEl = document.createElement("a");
-      movieEl.classList.add("movie");
+      const movieEl = document.createElement("div");
+      movieEl.classList.add("link");
       const coverUrl = covers.find(cover=>cover.id ===movie.id).src;
 
-      movieEl.innerHTML = `<div class="movie-cover-inner">
+      movieEl.innerHTML = `<a href="./film-discription.html"><div class="movies"></div><div class="movie-cover-inner">
       <img
         src="${coverUrl}"
         alt="cover"class="movie-cover"/>
@@ -30,7 +30,7 @@ async function showMovies() {
      
       </div>
      
-    </div>`
+    </div></div></a>`
     moviesEl.appendChild(movieEl);
     })
     

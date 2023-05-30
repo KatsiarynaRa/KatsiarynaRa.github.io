@@ -1,3 +1,20 @@
-.film{
-    display: flex;
+.movie-wrapper,.charecters{
+  margin: 0 auto;
+  width: 80vw;
+  margin-top: 20px;
+}
+.film {
+  display: flex;
+  gap: 10px;
+}
+.file-data{
+    display: grid;    
+    grid-template-columns: 140px 140px;
+    font-size: 13px
+}
+.charecters h3{
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 10px;
+
 }
