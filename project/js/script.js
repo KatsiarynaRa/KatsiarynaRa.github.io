@@ -26,7 +26,7 @@ async function showMovies() {
       <div class="episode"> <span>Episod:</span>${movie.episode_id
       }
       </div>
-      <div class="release-date">${movie.release_date}
+      <div class="release-date">${movie.release_date.slice(0, 4)}
      
       </div>
      
