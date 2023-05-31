@@ -7,6 +7,7 @@ document.querySelector('.themetoggle').addEventListener('click', (event) => {
       localStorage.setItem('theme', 'dark')
     }
     addDarkClassToHTML()
+    
   });
   
   function addDarkClassToHTML() {

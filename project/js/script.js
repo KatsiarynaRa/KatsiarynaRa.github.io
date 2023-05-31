@@ -24,7 +24,7 @@ async function showMovies() {
       <div class="title">
         ${movie.title}
       </div>
-      <div class="episode"> <span>Episod:</span>${movie.episode_id
+      <div class="episode"data-lang-key="Episode"> <span >Episode:</span>${movie.episode_id
       }
       </div>
       <div class="release-date">${movie.release_date.slice(0, 4)}

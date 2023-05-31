@@ -27,48 +27,47 @@
             src="./images/pngimg.com - star_wars_logo_PNG7.png"
             alt="StarWars"
         /></a>
-        <form onsubmit="formEvent(event)" class="aligne-self">
-     
-          <button class="language-changer" onclick="changeLanguage()">
-            Ru
-          </button>
-
+        <form onsubmit="formEvent(event)" class="aligne-self">  
+          <button onclick="changeLang('ru')" class="language-changer btn">ru</button>
+            <button onclick="changeLang('en')" class="language-changer btn">en</button>       
+         
           <a href="#" class="themetoggle">
+            
             <span class="material-symbols-outlined"> wb_sunny </span>
           </a>
         </form>
       </div>
       <div class="wrapper">
         <div class="form-group">
-          <div class="selector-title">Sort by:</div>
+          <div class="selector-title"data-lang-key="Sort by">Sort by:</div>
           <div class="select-wrapper">
             <select name="select-category" id="" class="select">
-              <option value="1">Episod number</option>
-              <option value="2">Release date</option>
+              <option data-lang-key="Episod number" value="1">Episod number</option>
+              <option  data-lang-key="Release date"value="2">Release date</option>
             </select>
           </div>
           <button
-            class="material-symbols-outlined sorting-btn"
+            class="material-symbols-outlined sorting-btn btn"
             data-direction="down"
             onclick="changeDirection(event, 'down')"
           >
             south
           </button>
           <button
-            class="material-symbols-outlined sorting-btn"
+            class="material-symbols-outlined sorting-btn btn"
             data-direction="up"
             onclick="changeDirection(event, 'up')"
           >
             north
           </button>
         </div>
-        <div class="search show ">
+        <!-- <div class="search show">
           <input
             class="search__input"
             type="search"
             name="search"
-            oninput="function()"
-            placeholder="Search..."
+            oninput="function()"           
+            data-lang-key="Search"
           />
           <button
             class="material-symbols-outlined search-button"
@@ -77,16 +76,17 @@
           >
             search
           </button>
-        </div>
+        </div> -->
         <div class="wiev-controls">
           <button
-            class="material-symbols-outlined sorting-btn view-changer disable"
+            class="material-symbols-outlined sorting-btn view-changer btn disable"
             onclick="changeView()"
           >
             calendar_view_month
           </button>
-          <button class="material-symbols-outlined sorting-btn view-changer"
-          onclick="changeView()"
+          <button
+            class="material-symbols-outlined sorting-btn btn view-changer"
+            onclick="changeView()"
           >
             view_list
           </button>
@@ -96,6 +96,7 @@
     <div class="container">
       <div class="movies"></div>
     </div>
+    <script src="./js/dictionaries.js"></script>
     <script src="./js/covers.js"></script>
     <script src="./js/theme.js"></script>
     <script src="./js/view.js"></script>

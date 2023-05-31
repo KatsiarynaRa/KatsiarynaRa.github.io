@@ -163,3 +163,11 @@ input::-webkit-input-placeholder {
   max-width: 100vw;
   padding: 10px;
 }
+.themetoggle{
+text-decoration: none;
+display: flex;
+align-items: center;
+}
+.themetoggle span{
+  align-self: flex-end;
+}
