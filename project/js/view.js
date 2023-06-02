@@ -6,3 +6,4 @@ function changeView(){
     movie.forEach((element) => element.classList.toggle("list"));
     btns.forEach((element) => element.classList.toggle("disable"));
 }
+
