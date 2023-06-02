@@ -1,3 +1,22 @@
+const moviesContainer = document.querySelector('.movies-container');
+ 
+
+const LOCALE_VIEW = 'view'
+const selectedView = localStorage.getItem(LOCALE_VIEW) || 'grid';
+changeView(selectedView);
+
+function changeView(view) {
+ 
+  localStorage.setItem(LOCALE_VIEW, view);
+  if (view === 'list') {
+    moviesContainer.classList.remove('grid-view')
+    moviesContainer.classList.add(`${view}-view`)
+  }
+  moviesContainer.classList.remove('list-view')
+  moviesContainer.classList.add(`${view}-view`)
+ 
+}
+
 async function fetchMovies() {
   const response = await fetch(
     `https://desfarik.github.io/star-wars/api/film/all.json`
@@ -6,8 +25,9 @@ async function fetchMovies() {
   console.log(movies)
   return movies;
 }
+
 const LOCALE_SORTING = 'sorting'
-const selectedSorting = localStorage.getItem(LOCALE_SORTING) || 'episode-number';
+const selectedSorting = localStorage.getItem(LOCALE_SORTING) || 'episode_number_asc';
 renderMovies(selectedSorting)
 
 function onSortingChange(selectedObject) {
@@ -16,6 +36,7 @@ function onSortingChange(selectedObject) {
   localStorage.setItem(LOCALE_SORTING, sortingValue);
   renderMovies(sortingValue)
 }
+
 async function renderMovies(sortingValue) {
   const listOfMovies = await fetchMovies();
 
@@ -37,17 +58,31 @@ moviesContainer.innerHTML = '';
 listOfMovies.forEach(element => {
   const movieItem = document.createElement('div');
   movieItem.classList.add('movie-item');
-  movieItem.innerHTML =
-  `<a href="./episode.html?episode=${element.episode_id}" class="episode-link">
-        <img src="images/episode${element.episode_id}.jpeg" alt="${element.title}" class="movie-poster">
-        <div class="movie-details">
-          <div class="movie-number">Episode ${element.episode_id}</div>
+  movieItem.innerHTML = `
+  
+  <a href="./episode.html?episode=${element.episode_id}" class="episode-link">
+        <img src="images/episode${element.episode_id}.jpeg" alt="${element.title}" class="movie-cover">
+        <div class="movie-details">         
           <div class="movie-title">${element.title}</div>
+          <div class="movie-number">Episode ${element.episode_id}</div>
           <div class="movie-year">Year: ${element.release_date.slice(0,4)}</div>
         </div>
   </a>
   `
   moviesContainer.append(movieItem);
 })
-
+selectedFavoriteButton()
 }
+
+
+
+
+// function disableBtn() {
+//   btns = document.querySelectorAll('.fill')
+  
+// btns.addEventListener('click', function(){
+//   btns.forEach((element) => element.classList.toggle("disable"));
+  
+// })
+// }
+

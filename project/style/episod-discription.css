@@ -1,0 +1,29 @@
+.episode-container {
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+}
+.episode-description {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    line-height: 30px;
+    font-style: italic;
+    font-size: 20px;
+}
+.episode-discription-cover {
+    max-width: 400px;
+    border-radius: 25px;
+}
+.episode-details {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.episode-no {
+    font-weight: bold;
+   
+}
+.episode-name {
+    font-weight: bold;
+}

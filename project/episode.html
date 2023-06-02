@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Episode</title>
+  <link rel="stylesheet" href="style/movie.css">
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/episod-discription.css">
+    <link rel="stylesheet" href="style/character.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-buttons">
+        <div class="language-btns">
+          <button  data-lang-key="Ru" onclick="changeLang('ru')" class="language-button fill">Ru</button>
+          <button  data-lang-key="En" onclick="changeLang('en')" class="language-button fill">En</button>
+        </div>
+        <div>
+          <a href="#" class="themetoggle">
+            <span class="material-symbols-outlined"> wb_sunny </span>
+          </a>
+        </div>
+      </div>
+      <a href="./index.html" class="header-title">StarWars</a>
+    </header>
+
+    <div class="main-content-container">
+      <div class="content-container"></div>
+    </div>
+    <script src="./js/theme.js"></script>
+    <script src="./js/dict-en.js"></script>
+    <script src="./js/dict-ru.js"></script>
+    <script src="./js/localstorage.js"></script>
+    <script src="./js/episode.js"></script>
+  </body>
+</html>

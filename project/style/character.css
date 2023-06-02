@@ -1,0 +1,101 @@
+.character-container {
+    display: flex;
+    gap: 20px;
+    font-family:font-family:'Oswald', sans-serif;;
+  }
+  
+  .character-info span{
+   
+    margin-left: 20px;
+    font-weight: bold;
+  } 
+
+  .character-appearance {
+    margin-top: 15px;
+    text-decoration: underline;
+    font-size: 20px;
+  }
+  .character-filmography {
+    text-align: center;
+  }
+  .character-filmography-list {
+    display: flex;
+    justify-content: space-around;
+  }
+  .character-filmography-heading {
+  color:var(--text-color);
+  font-weight: bold;
+  margin:20px;
+
+  }
+  .character-movie-link {
+    text-decoration: none;
+    color:var(--text-color);
+    display: flex;
+    gap: 10px;
+  }  
+  .episode-item {
+    box-sizing: border-box;
+    background:var(--background-color);
+    padding: 20px;    
+    width: 200px;
+    border: 1px solid;
+    border-color: var(--border-color);
+  }
+  .episode-item:hover {
+    border: 3px solid;
+  }
+  .light-theme .episode-item {
+    background-color: antiquewhite;
+  }
+  .character-movie-image {
+    height: 100px;
+  }
+  
+  .characters-heading {
+    font-weight: 800;
+    padding: 40px;
+}
+
+.characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 26%);
+    justify-content: center;
+    column-gap: 5px;
+    row-gap: 15px;
+}
+.character-link {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+.character-item {
+border:1px solid black;
+}
+
+.character-item:hover {
+    cursor: pointer;  
+   
+
+}
+.character-name {
+    padding-bottom: 20px;
+    font-size: 24px;
+    color:var(--text-color);
+    
+}
+.character-image {
+    width: 50%;
+    aspect-ratio: 1/1.5;
+    object-fit: contain;
+}
+.character-details {
+    line-height: 30px;
+    text-transform: capitalize;
+}
+.light-theme .character-details{
+    color: black;
+}
+.spinner .character-item {
+    display: none;
+}

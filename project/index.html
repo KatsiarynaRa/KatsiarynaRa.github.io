@@ -1,84 +1,108 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/movie.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,700;1,700&family=Roboto&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-
-    <title>Movie App</title>
+    <title>Main</title>
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/movie.css" />
   </head>
   <body>
     <header class="header">
-      <div class="wrapper">
-        <a href="./index.html" class="header-logo"></a>
-        <form onsubmit="formEvent(event)" class="aligne-self">
+      <div class="header-buttons">
+        <div class="language-btns">
+          <button
+            data-lang-key="Ru"
+            onclick="changeLang('ru')"
+            class="language-button fill"
+          >
+            Ru
+          </button>
+          <button
+            data-lang-key="En"
+            onclick="changeLang('en')"
+            class="language-button fill"
+          >
+            En
+          </button>
+        </div>
+        <div>
           <a href="#" class="themetoggle">
             <span class="material-symbols-outlined"> wb_sunny </span>
           </a>
-        </form>
+        </div>
       </div>
-      <div class="wrapper">
-        <div class="form-group">
-          <div class="selector-title" data-lang-key="Sort by">Sort by:</div>
-          <div class="select-wrapper">
-            <select onchange="onSortingChange(this)" name="select-category" id="" class="select">
-              <option data-lang-key="Episod number" value="episod-number prev ">
-                Episod number &uarr;
+      <a href="./index.html" class="header-title">StarWars</a>
+    </header>
+    <div class="main-content-container">
+      <div class="sorting-bar">
+        <div class="sorting">
+          <span class="sort" data-lang-key="Sort by">Sort by:</span>
+          <div class="sorting-options">
+            <select onchange="onSortingChange(this)" class="selection-bar">
+              <option
+                value="episode_number_asc"
+                data-lang-key="Episode (from earliest)"
+              >
+                Episode (from earliest)
               </option>
-              <option data-lang-key="Episod number" value="episod-number last">
-                Episod number
-                &darr;
+              <option
+                value="episode_number_desc"
+                data-lang-key="Episode (from latest)"
+              >
+                Episode (from latest)
               </option>
-              <option data-lang-key="Release date" value="release-date newest">
-                Release date &uarr;
+              <option
+                value="episode_year_asc"
+                data-lang-key="Year (from earliest)"
+              >
+                Year (from earliest)
               </option>
-              <option data-lang-key="Release date" value="release-date oldest">
-                Release date &darr;
+              <option
+                value="episode_year_desc"
+                data-lang-key="Year (from latest)"
+              >
+                Year (from latest)
               </option>
-              
             </select>
           </div>
-         
         </div>
-        <div class="wiev-controls">
+        <div class="display-options">
           <button
-            class="material-symbols-outlined sorting-btn view-changer btn disable"
-            onclick="changeView()"
-          >
-            calendar_view_month
-          </button>
-          <button
-            class="material-symbols-outlined sorting-btn btn view-changer"
-            onclick="changeView()"
+            onclick="changeView('list')"
+            class="list-view-button view-buttons material-symbols-outlined fill"
+            title="list view"
           >
             view_list
           </button>
+          <button
+            onclick="changeView('grid')"
+            class="grid-view-button view-buttons material-symbols-outlined fill"
+            title="grid theme"
+          >
+            calendar_view_month
+          </button>
         </div>
       </div>
-    </header>
-    <div class="movies-container">
-    <script src="./js/covers.js"></script>
+      <div class="container">
+        <div class="movies-container"></div>
+      </div>
+    </div>
+    <script src="./js/dict-en.js"></script>
+    <script src="./js/dict-ru.js"></script>
+    <script src="./js/localstorage.js"></script>
     <script src="./js/theme.js"></script>
-    <script src="./js/view.js"></script>
     <script src="./js/script.js"></script>
-   
   </body>
 </html>
